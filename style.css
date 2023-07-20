@@ -50,7 +50,7 @@ nav {
   display: flex;
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  justify-content: left;
+  justify-content: flex-end;
   background-position: center;
   background-color: #000; /* Fallback background color */
   animation: animateColors 10s linear infinite;
@@ -142,7 +142,6 @@ section {
   font-size: 30px;
 }
 
-
 .detail h1 span:nth-child(2) {
   color: #00E8F8;
 }
@@ -215,13 +214,13 @@ section {
 
 .timeline {
   display: flex;
-  border-radius:43%;
-  padding: 70px;
-  margin: 100px;
+  border-radius: 65%;
+  padding: 5%;
+  margin: 5%;
   flex-direction: column;
   background-color: #333;
   align-items: center;
-  animation: bounce 2s infinite;
+  animation: bounce 1s infinite;
 }
 
 .timeline-item {
@@ -232,7 +231,7 @@ section {
 
 .timeline-content {
   position: relative;
-  padding: 20px;
+  padding: 5%;
   transform: translateY(30px);
   animation: fade-in-slide-up 0.6s ease-in-out forwards;
 }
@@ -266,6 +265,20 @@ section {
 .timeline-content ul li {
   margin-bottom: 5px;
 }
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .timeline {
+    padding: 2%;
+    margin: 5%;
+  }
+
+  .timeline-content {
+    padding: 2%;
+    transform: translateY(10px);
+  }
+}
+
 
 .certifications h1{
   display:flex;
@@ -303,31 +316,32 @@ section {
   border-radius: 50%;
 }
 
-/* Skills Section */
 .skills {
   text-align: center;
-  padding: 40px 0;
+  padding: 20px;
   display: flex;
   flex-direction: column;
 }
-.skills h2{
+
+.skills h2 {
   font-size: 30px;
   color: #fcf2f2;
-  padding: 40px;
+  padding: 20px;
   align-items: center;
 }
 
 .skills ul {
   list-style: none;
-  padding: 40px;
+  padding: 20px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .skills li {
-  display: flex;
-  margin: 10px;
+  margin: 1%;
   transform-origin: center;
-  animation: heartbeat 1s infinite; /* Adjust the margin as needed to create the desired gap */
+  animation: heartbeat 1s infinite;
 }
 
 .nav-link {
@@ -347,6 +361,27 @@ section {
 .nav-link.active {
   background-color: #00e8f8;
 }
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .skills {
+    padding: 10px;
+  }
+
+  .skills h2 {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .skills ul {
+    padding: 10px;
+  }
+
+  .skills li {
+    margin: 2%;
+  }
+}
+
 
 /* Projects Section */
 .projects-container {
@@ -496,5 +531,50 @@ footer {
   }
   100% {
     background-color: #800080; /* Purple */
+  }
+}
+/* Existing CSS code before media queries (unmodified) */
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  /* Adjust styles for screens with a maximum width of 768px */
+  .timeline {
+    padding: 2%;
+    margin: 5%;
+    border-radius: 65%; /* Adjust the border-radius for mobile devices */
+  }
+
+  .timeline-content {
+    padding: 2%;
+    transform: translateY(10px);
+  }
+
+  .skills {
+    padding: 10px;
+  }
+
+  .skills h2 {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .skills ul {
+    padding: 10px;
+  }
+
+  .skills li {
+    margin: 2%;
+  }
+
+  .projects-container {
+    padding: 20px 0;
+  }
+
+  .projects-container h2 {
+    font-size: 30px;
+  }
+
+  .projects ul li {
+    font-size: 18px;
   }
 }
