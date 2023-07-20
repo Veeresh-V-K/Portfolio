@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Portfolio</title>
+  <script src="portfolio.js"></script>
+</head>
+
+<body>
+  <video autoplay loop muted id="video-bg">
+    <source src="img/pexels-cottonbro-9694805 (2160p).mp4" type="video/mp4">
+    </video>
+  <header>
+    <nav>
+      <a href="#start" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skill">Skills</a>
+      <a href="mailto:veereshvkanakalamath2@gmail.com">Contact</a>
+    </nav>
+  </header>
+
+  <div class="main">
+    <div class="detail">
+      <h1><span>Hi, It's Me</span>  <span style="color:#00E8F8;">Veeresh V Kanakalamath</span></h1>
+      <h1 class="block-reveal__text subtitle mt-0 ws-nowarp">
+        "Success is not final, failure is not fatal: <br>It is the courage to continue that counts." - Winston Churchill</h1>
+      <div class="social">
+        <a href="#"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/veeresh-v-kanakalamath-50a194211"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="images">
+      <img src="/img/dsfbwjf-new.jpg" alt="" width="50%">
+    </div>
+  </div>
+  </body>
+  <body>
+  <div id="about" class="About">
+    <h1><span style = "color: azure; font-family:cursive;font-size: 30px;text-align: center; animation-fill-mode: forwards;">About Me</span></h1>
+    <section id="education">
+      <h2>Education Details</h2>
+      <div class="education-card">
+        <h3>BE in Information Science</h3>
+        <p>SDM Institute of Technology (VTU)<br>2019-2023<br>CGPA: 8.0</p>
+      </div>
+      <div class="education-card">
+        <h3>PUC</h3>
+        <p>Alva’s PU College, Moodbidri<br>2017-2019<br>Percentage: 73.6%</p>
+      </div>
+      <div class="education-card">
+        <h3>SSLC</h3>
+        <p>Vishweshwraiah English High School Allipur, Ballari (Bellary)<br>2016-2017<br>Percentage: 83.52%</p>
+      </div>
+    </section>
+    <section id="work-experience">
+      <h2>Work Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Company: Deccan Herald</h3>
+            <p>Location: Bangalore<br>Designation: Intern<br>Domain: Cyber Security<br>Period: 16/08/2022 to 16/09/2022</p>
+            <ul>
+              <li>Python web scraping project using BeautifulSoup and Selenium at Deccan Herald Bangalore</li>
+              <li>Achieved a 40% reduction in data collection time through automation</li>
+              <li>Expertise in web scraping techniques and libraries</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul class="certifications-list">
+        <li>Programming for Everybody (Getting Started with Python) - Completed on 31/07/2020 (Coursera)</li>
+        <li>Learn Python: The Complete Python Programming Course - Completed on 15/06/2022 (Udemy)</li>
+        <li>Learn Ethical Hacking from Scratch - Completed on 31/05/2023 (Udemy)</li>
+      </ul>
+    </section>
+    <div id="skill" class="skills">
+      <h2>Skills</h2>
+        <ul>
+          <li><a class="nav-link" href="#" onclick="showProjects('ai'); event.preventDefault();">Artificial Intelligence</a></li>
+          <li><a class="nav-link" href="#" onclick="showProjects('cyber-security'); event.preventDefault();">Cyber Security (Ethical Hacking)</a></li>
+          <li><a class="nav-link" href="#" onclick="showProjects('web-development'); event.preventDefault();">MySQL</a></li>
+          <li><a class="nav-link" href="#" onclick="showProjects('web-development'); event.preventDefault();">Web Development</a></li>
+          <li><a class="nav-link" href="#" onclick="showProjects('linux'); event.preventDefault();">Linux</a></li>
+          <li><a class="nav-link" href="#" onclick="showProjects('big-data'); event.preventDefault();">Big Data</a></li>
+          <li><a class="nav-link" href="#" onclick="showProjects('ai'); event.preventDefault();">Python Programming (Intermediate)</a></li>
+          <li><a class="nav-link" href="#" onclick="showProjects('cpp'); event.preventDefault();">C++ Programming (Intermediate)</a></li>
+          <li><a class="nav-link" href="#" onclick="showProjects('java'); event.preventDefault();">Java (Intermediate)</a></li>
+          <li><a class="nav-link" href="#" onclick="showProjects('c'); event.preventDefault();">C Programming (Intermediate)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="projects-container">
+      <div id="ai-projects" class="projects show">
+        <h2 class="project-title">Projects for Artificial Intelligence</h2>
+        <ul>
+          <li>Title: Twitter Sentiment Analysis using Recurrent Neural Network</li>
+          <li>Led team of 4, implemented advanced AI techniques for automated sentiment classification with outstanding results.</li>
+          <li>Developed sentiment analysis system with LSTM achieving 86.79% accuracy.</li>
+        </ul>
+      </div>
+      <div id="cyber-security-projects" class="projects show">
+        <h2 class="project-title">Projects for Cyber Security (Ethical Hacking)</h2>
+        <ul>
+          <li>Title: Web Scraper</li>
+          <li>Description: <br>Led multi-disciplinary 3-person team to a Python web scraping project using pandas and google sheet.<br>
+            Python web scraping experiment reduces data collection time by 40% using BeautifulSoup and Selenium Automation.<br>
+            Increased understanding of cybersecurity by 50% and learned how to secure the system as well as about vulnerabilities.
+          </li>
+        </ul>
+      </div>
+      <div id="web-development-projects" class="projects show">
+        <h2 class="project-title">Projects for Web Development</h2>
+        <ul>
+          <li>Title: Photography Management System</li>
+          <li>Description:<br>Led team of 2, integrated secure payment gateways, resulting in a 55% increase in bookings.<br>
+            Designed and created a web application using HTML, MySQL, and PHP that allows photographers to book online with ease. It had an 87% success rate.
+          </li>
+        </ul>
+      </div>
+      <div id="cpp-projects" class="projects show">
+        <h2 class="project-title">Projects for C++ Programming (Intermediate)</h2>
+        <ul>
+          <li>Title: Personal Diary Management</li>
+          <li>Description:<br>Led team of 2 as project leader in designing and implementing a secure C++ console application.<br>
+            Prioritized data security and implemented password-based access controls.<br>
+            Achieved exceptional 98% security rate, showcasing effectiveness in safeguarding sensitive information.
+          </li>
+        </ul>
+      </div>
+      <div id="java-projects" class="projects show">
+        <h2 class="project-title">Projects for Java (Intermediate)</h2>
+        <ul>
+          <li>Title: Notes Manager</li>
+          <li>Description:<br>Led team of 2 as project leader in developing a sticky note-like app.<br>
+            Created user-friendly Android app with Java and Android Studio for efficient personal note management.<br>
+            App achieved an impressive 99% accuracy rate, showcasing exceptional performance and reliability.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-light py-4">
+    <div class="container">
+      <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
