@@ -86,6 +86,37 @@ section {
   min-height: 100vh;
   position: relative;
 }
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Set the height to adjust according to your design */
+}
+
+/* Styling for the image inside the container */
+.image img {
+  width: 100%; /* Make the image responsive and fill the container */
+  max-width: 400px; /* Limit the maximum width of the image */
+  border-radius: 10px; /* Add rounded corners to the image */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow for visual effect */
+  transition: transform 0.3s ease-in-out;
+  animation: fadeInScale 1s ease-out; 
+  /* Add a smooth transition when the image is hovered */
+}
+@keyframes fadeInScale {
+  0% {
+    opacity: 0; /* Start with 0 opacity (fully transparent) */
+    transform: scale(0.8); /* Start with 80% of the original size */
+  }
+  100% {
+    opacity: 1; /* End with 100% opacity (fully opaque) */
+    transform: scale(1); /* End with original size */
+  }
+}
+/* Hover effect to scale the image slightly on hover */
+.image img:hover {
+  transform: scale(1.05);
+}
 
 .block-reveal__text {
   font-size: 25px;
@@ -131,24 +162,6 @@ section {
   color: #00E8F8;
 }
 
-.images {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  width: 200px;
-  height: 200px;
-  border-radius: 20%;
-  overflow: hidden;
-  opacity: 10%;
-  transform: translateX(20px);
-  animation: fade-in-slide-right 1s ease-in-out forwards;
-}
-
-.images img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  }
 
 /* About Section */
 
