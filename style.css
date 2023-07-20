@@ -266,20 +266,6 @@ section {
   margin-bottom: 5px;
 }
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  .timeline {
-    padding: 2%;
-    margin: 5%;
-  }
-
-  .timeline-content {
-    padding: 2%;
-    transform: translateY(10px);
-  }
-}
-
-
 .certifications h1{
   display:flex;
   flex-direction: column;
@@ -339,7 +325,7 @@ section {
 }
 
 .skills li {
-  margin: 3%;
+  margin: 1%;
   transform-origin: center;
   animation: heartbeat 1s infinite;
 }
@@ -348,8 +334,7 @@ section {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  gap: 1px;
-  padding: 10px 30px;
+  padding: 10px 20px;
   border-radius: 30px;
   transition: background-color 0.3s ease;
   background-color: #333;
@@ -361,26 +346,6 @@ section {
 
 .nav-link.active {
   background-color: #00e8f8;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  .skills {
-    padding: 10px;
-  }
-
-  .skills h2 {
-    font-size: 24px;
-    padding: 10px;
-  }
-
-  .skills ul {
-    padding: 10px;
-  }
-
-  .skills li {
-    margin: 2%;
-  }
 }
 
 
