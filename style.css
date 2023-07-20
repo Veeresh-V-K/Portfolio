@@ -97,7 +97,7 @@ section {
 .image img {
   width: 100%; /* Make the image responsive and fill the container */
   max-width: 400px; /* Limit the maximum width of the image */
-  border-radius: 10px; /* Add rounded corners to the image */
+  border-radius: 50%; /* Add rounded corners to the image */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow for visual effect */
   transition: transform 0.3s ease-in-out;
   animation: fadeInScale 1s ease-out; 
