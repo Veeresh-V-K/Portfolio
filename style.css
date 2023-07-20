@@ -214,7 +214,7 @@ section {
 
 .timeline {
   display: flex;
-  border-radius: 65%;
+  border-radius: 50%;
   padding: 5%;
   margin: 5%;
   flex-direction: column;
@@ -339,7 +339,7 @@ section {
 }
 
 .skills li {
-  margin: 1%;
+  margin: 3%;
   transform-origin: center;
   animation: heartbeat 1s infinite;
 }
