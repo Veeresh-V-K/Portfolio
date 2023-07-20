@@ -317,15 +317,18 @@ section {
 }
 
 .skills ul {
+  display: flex;
   list-style: none;
   padding: 20px;
-  display: flex;
+  margin: 50px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .skills li {
-  margin: 1%;
+  display: flex;
+  padding: 2%;
+  margin: 2%;
   transform-origin: center;
   animation: heartbeat 1s infinite;
 }
