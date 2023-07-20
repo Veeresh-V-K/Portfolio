@@ -136,6 +136,12 @@ section {
   transform: translateY(20px);
   animation: fade-in-slide-up 1s ease-in-out forwards;
 }
+.detail a{
+  color: #cec3c3;
+  padding: 10px;
+  font-size: 30px;
+}
+
 
 .detail h1 span:nth-child(2) {
   color: #00E8F8;
