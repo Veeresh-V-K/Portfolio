@@ -15,10 +15,52 @@
 </head>
 
 <body>
-  <div class="custom-cursor"></div>
   <video autoplay loop muted id="video-bg">
+        <!-- 2K Video Source -->
     <source src="img/pexels-cottonbro-9694805 (2160p).mp4" type="video/mp4">
-    </video>
+    <!-- 1080p Video Source -->
+    <source src="img/1080P.mp4" type="video/mp4" data-resolution="1080p">
+    <!-- Fallback video for unsupported browsers or other issues -->
+    <source src="img/pexels-cottonbro-9694805 (2160p).mp4" type="video/mp4">
+  </video>
+  
+  <script>
+    // Code to detect screen resolution and set video quality
+    const videoElement = document.getElementById('video-bg');
+    const availableResolutions = ['2k', '1080p'];
+    let selectedResolution;
+  
+    // Function to detect the screen resolution
+    function getScreenResolution() {
+      return Math.max(window.screen.width, window.screen.height);
+    }
+  
+    // Determine the appropriate resolution based on the screen's capabilities
+    const screenResolution = getScreenResolution();
+    if (screenResolution >= 2560) {
+      selectedResolution = '2k'; // Show 2K video for screens that support it
+    } else {
+      selectedResolution = '1080p'; // Otherwise, show 1080p video
+    }
+  
+    // Find the appropriate video source and set it as the active source
+    const sources = videoElement.getElementsByTagName('source');
+    let selectedSource;
+    for (const source of sources) {
+      if (source.getAttribute('data-resolution') === selectedResolution) {
+        selectedSource = source;
+        break;
+      }
+    }
+  
+    // If the selected resolution is not found, use the fallback video
+    if (!selectedSource) {
+      selectedSource = sources[sources.length - 1]; // Use the last source as fallback
+    }
+  
+    // Update the video source to the selected resolution
+    videoElement.src = selectedSource.src;
+  </script>
   <header>
     <nav>
       <a href="#start" class="active">Home</a>
