@@ -45,30 +45,45 @@ header {
 }
 
 nav {
-  position: fixed;
-  border-radius: 10px;
+  position: fixed; /* Fix the nav element in position */
+  top: 0;
+  right: 0;
+  width: 100%; /* Set the width to fill the entire width of the viewport */
   display: flex;
-  box-sizing: border-box;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  justify-content: flex-end;
-  background-position: center;
-  background-color: #000; /* Fallback background color */
-  animation: animateColors 10s linear infinite;
+  justify-content: flex-end; /* Align the items to the right */
+  z-index: 9999;
 }
 
-nav a {
+nav ul {
+  list-style: none; /* Remove the default list styles */
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  display: flex;
+  background-color: #555;
+  
+}
+
+nav ul li {
+  margin-right: 10px; /* Add some spacing between list items */
+}
+
+nav ul li a {
+  display: inline-block;
   color: #fff;
   padding: 10px;
   transition: color 0.3s ease;
+  text-decoration: none; /* Remove underline from links */
 }
 
-nav a:hover {
-  color: #00E8F8;
+nav ul li a:hover {
+  color: #00e8f8;
 }
 
-nav a.active {
-  color: #00E8F8;
+nav ul li a.active {
+  color: #00e8f8;
 }
+
 section {
   display: inline;
   justify-content: center;
@@ -354,24 +369,26 @@ section {
 
 /* Projects Section */
 .projects-container {
+  display: none;
   padding: 50px 0;
   text-align: center;
-  display: none;
   background-color: #cec3c3;
-}
-.projects-container h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #f7e7e7;
+  opacity: 0; /* Initial opacity set to 0 */
 }
 
 .projects {
-  opacity: 0;
+  display: none;
   transition: opacity 0.5s ease;
 }
 
 .projects.show {
   opacity: 1;
+}
+
+.projects-container h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #f7e7e7;
 }
 
 .projects ul {
