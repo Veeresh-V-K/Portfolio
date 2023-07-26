@@ -342,7 +342,6 @@ section {
 
 .skills li {
   display: flex;
-  padding: 2%;
   margin: 2%;
   transform-origin: center;
   animation: heartbeat 1s infinite;
